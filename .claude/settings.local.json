@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"G:/My Drive/A-G-R-A-T-A/images/\"*.png \"G:/My Drive/A-G-R-A-T-A/public/images/\")",
+      "Bash(cp \"G:/My Drive/A-G-R-A-T-A/images/\"*.jpg \"G:/My Drive/A-G-R-A-T-A/public/images/\")",
+      "Bash(npm install:*)",
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
