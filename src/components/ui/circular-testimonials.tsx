@@ -107,7 +107,7 @@ export const CircularTestimonials = ({
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [activeIndex, testimonialsLength]);
+  }, [activeIndex, testimonialsLength, handleNext, handlePrev]);
 
   const handleNext = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % testimonialsLength);
