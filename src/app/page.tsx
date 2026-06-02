@@ -67,7 +67,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ type: "spring", stiffness: 80, damping: 20 }}
             className="text-center mb-16"
           >
             <h2 className="font-aesthetic text-5xl md:text-7xl text-coffee mb-4 tracking-wide">
@@ -106,7 +106,7 @@ export default function HomePage() {
             <motion.div
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ type: "spring", stiffness: 80, damping: 20 }}
               className="lg:w-1/2 flex justify-center"
             >
               <div className="relative">
@@ -127,7 +127,7 @@ export default function HomePage() {
             <motion.div
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ type: "spring", stiffness: 80, damping: 20 }}
               className="lg:w-2/3"
             >
               <div className="bio-card max-w-4xl">
@@ -202,9 +202,10 @@ export default function HomePage() {
           initial={{ opacity: 0.5, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
+            type: "spring",
+            stiffness: 80,
+            damping: 20,
             delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
           }}
           className="text-center"
         >
@@ -246,7 +247,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.5 }}
             className="flex justify-center"
           >
             <div className="sketch-board">

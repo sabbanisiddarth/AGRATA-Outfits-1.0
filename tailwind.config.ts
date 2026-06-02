@@ -10,12 +10,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#E8DFD5",
-        coffee: "#3D2B1F",
-        "rose-dust": "#A67C74",
-        "muted-umber": "#705A4C",
-        emerald: "#2D4F4F",
-        "surface-low": "#F5F3EE",
+        cream: "hsl(var(--bg-cream))",
+        coffee: "hsl(var(--text-coffee))",
+        "rose-dust": "hsl(var(--rose-dust))",
+        "muted-umber": "hsl(var(--muted-umber))",
+        emerald: "hsl(var(--emerald-accent))",
+        "surface-low": "hsl(var(--surface-low))",
+        champagne: "hsl(var(--champagne-gold))",
+        midnight: "hsl(var(--midnight-contrast))",
       },
       fontFamily: {
         aesthetic: ["Aesthetic", "serif"],

@@ -17,12 +17,14 @@
    Design System CSS Variables
    ========================================== */
 :root {
-  --bg-cream: #E8DFD5;
-  --text-coffee: #3D2B1F;
-  --rose-dust: #A67C74;
-  --muted-umber: #705A4C;
-  --emerald-accent: #2D4F4F;
-  --surface-low: #F0EAE2;
+  --bg-cream: 38 26% 93%;
+  --text-coffee: 25 29% 17%;
+  --rose-dust: 12 28% 65%;
+  --muted-umber: 25 15% 45%;
+  --emerald-accent: 160 18% 35%;
+  --surface-low: 38 20% 96%;
+  --champagne-gold: 42 45% 65%;
+  --midnight-contrast: 220 30% 15%;
 }
 
 /* ==========================================
@@ -45,7 +47,7 @@ body, p, span, a, input, li, label {
 }
 
 body {
-  background-color: var(--bg-cream);
+  background-color: hsl(var(--bg-cream));
   background-image: url("/agrataoutfits/images/texture.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -68,7 +70,7 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 /* Textured Cream Background */
 .textured-bg {
   position: relative;
-  background-color: var(--bg-cream);
+  background-color: hsl(var(--bg-cream));
   background-image: url("/agrataoutfits/images/texture.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -84,7 +86,7 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 /* Textured Rose Dust Background */
 .textured-bg-rose {
   position: relative;
-  background-color: var(--rose-dust);
+  background-color: hsl(var(--rose-dust));
   background-image: url("/agrataoutfits/images/texture.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -105,31 +107,31 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .bg-cream {
-  background-color: var(--bg-cream);
+  background-color: hsl(var(--bg-cream));
 }
 
 .bg-emerald {
-  background-color: var(--emerald-accent);
+  background-color: hsl(var(--emerald-accent));
 }
 
 .text-coffee {
-  color: var(--text-coffee);
+  color: hsl(var(--text-coffee));
 }
 
 .text-rose-dust {
-  color: var(--rose-dust);
+  color: hsl(var(--rose-dust));
 }
 
 .text-muted-umber {
-  color: var(--muted-umber);
+  color: hsl(var(--muted-umber));
 }
 
 .border-rose-dust {
-  border-color: var(--rose-dust);
+  border-color: hsl(var(--rose-dust));
 }
 
 .bg-rose-dust {
-  background-color: var(--rose-dust);
+  background-color: hsl(var(--rose-dust));
 }
 
 /* ==========================================
@@ -213,16 +215,16 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--surface-low);
+  background: hsl(var(--surface-low));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--muted-umber);
+  background: hsl(var(--muted-umber));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--rose-dust);
+  background: hsl(var(--rose-dust));
 }
 
 /* ==========================================
@@ -288,12 +290,27 @@ section {
    Glass Card
    ========================================== */
 .glass-card {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: hsla(0, 0%, 100%, 0.15);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
   border-radius: 1.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 100%, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 /* ==========================================
@@ -329,22 +346,24 @@ section {
    Testimonial Card
    ========================================== */
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: hsla(0, 0%, 100%, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 1.5rem;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
+  box-shadow: 0 4px 24px hsla(0, 0%, 0%, 0.06);
 }
 
 /* ==========================================
    Founder Bio Card
    ========================================== */
 .bio-card {
-  background: var(--surface-low);
+  background: hsl(var(--surface-low));
   border-radius: 1.5rem;
   padding: 2.5rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(112, 90, 76, 0.1);
+  box-shadow: 0 16px 48px hsla(0, 0%, 0%, 0.06);
+  border: 1px solid hsla(var(--text-coffee), 0.05);
 }
 
 /* ==========================================
@@ -375,7 +394,7 @@ section {
 
 .sketch-board-label {
   font-family: 'Aesthetic', serif;
-  color: var(--text-coffee);
+  color: hsl(var(--text-coffee));
   text-align: center;
   font-size: 0.875rem;
   margin-top: 0.75rem;
