@@ -7,7 +7,7 @@
    ========================================== */
 @font-face {
   font-family: 'Aesthetic';
-  src: url('/agrataoutfits/fonts/Aesthetic-Regular.woff2') format('woff2');
+  src: url('/fonts/Aesthetic-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -48,7 +48,7 @@ body, p, span, a, input, li, label {
 
 body {
   background-color: hsl(var(--bg-cream));
-  background-image: url("/agrataoutfits/images/texture.jpg");
+  background-image: url("/images/texture.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 .textured-bg {
   position: relative;
   background-color: hsl(var(--bg-cream));
-  background-image: url("/agrataoutfits/images/texture.jpg");
+  background-image: url("/images/texture.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 .textured-bg-rose {
   position: relative;
   background-color: hsl(var(--rose-dust));
-  background-image: url("/agrataoutfits/images/texture.jpg");
+  background-image: url("/images/texture.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
