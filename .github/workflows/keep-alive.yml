@@ -13,9 +13,9 @@ jobs:
       - name: Ping Landing Page
         run: |
           echo "Pinging AGRATA Outfits landing page..."
-          curl -fsSL https://outfitsagrata.vercel.app/ -o /dev/null -w "Landing Page HTTP Status: %{http_code}\n"
+          curl -fsSL https://outfitsagrata.vercel.app/agrataoutfits -o /dev/null -w "Landing Page HTTP Status: %{http_code}\n"
 
       - name: Ping Keep-Alive API Endpoint
         run: |
           echo "Pinging keep-alive API endpoint to trigger Supabase database activity..."
-          curl -fsSL https://outfitsagrata.vercel.app/api/keep-alive -w "\nAPI HTTP Status: %{http_code}\n"
+          curl -fsSL https://outfitsagrata.vercel.app/agrataoutfits/api/keep-alive -w "\nAPI HTTP Status: %{http_code}\n"
