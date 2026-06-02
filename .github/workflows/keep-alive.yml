@@ -1,0 +1,21 @@
+name: Supabase Keep-Alive
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every 2 days
+    - cron: "0 0 */2 * *"
+  workflow_dispatch: # Allows manual triggering from the GitHub repository UI
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Landing Page
+        run: |
+          echo "Pinging AGRATA Outfits landing page..."
+          curl -fsSL https://outfitsagrata.vercel.app/ -o /dev/null -w "Landing Page HTTP Status: %{http_code}\n"
+
+      - name: Ping Keep-Alive API Endpoint
+        run: |
+          echo "Pinging keep-alive API endpoint to trigger Supabase database activity..."
+          curl -fsSL https://outfitsagrata.vercel.app/api/keep-alive -w "\nAPI HTTP Status: %{http_code}\n"
