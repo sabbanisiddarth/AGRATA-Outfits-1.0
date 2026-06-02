@@ -1,8 +1,12 @@
 import { createBrowserClient } from "@supabase/ssr";
 
 export function createClient() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  // Fallback to placeholder strings during build/compile time to prevent Next.js prerendering crashes
   return createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    url || "https://placeholder-project.supabase.co",
+    anonKey || "placeholder-anon-key"
   );
 }
