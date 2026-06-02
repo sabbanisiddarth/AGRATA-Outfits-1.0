@@ -17,14 +17,14 @@
    Design System CSS Variables
    ========================================== */
 :root {
-  --bg-cream: 220 30% 15%; /* Midnight */
-  --text-coffee: 42 45% 85%; /* Champagne */
-  --rose-dust: 12 28% 65%;
-  --muted-umber: 42 30% 65%; /* Muted Gold */
-  --emerald-accent: 160 18% 35%;
-  --surface-low: 220 20% 20%; /* Dark Surface */
-  --champagne-gold: 42 45% 85%;
-  --midnight-contrast: 220 30% 15%;
+  --bg-cream: 32 26% 87%; /* #E8DFD5 */
+  --text-coffee: 24 33% 18%; /* #3D2B1F */
+  --rose-dust: 10 24% 55%; /* #A67C74 */
+  --muted-umber: 23 19% 37%; /* #705A4C */
+  --emerald-accent: 180 27% 24%; /* #2D4F4F */
+  --surface-low: 43 26% 95%; /* #F5F3EE */
+  --champagne-gold: 42 45% 65%; /* Keeping accent 1 */
+  --midnight-contrast: 220 30% 15%; /* Keeping accent 2 */
 }
 
 /* ==========================================
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6, .brand-title {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  background-blend-mode: multiply;
+  background-blend-mode: normal;
 }
 
 .textured-bg > * {
